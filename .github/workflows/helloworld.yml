@@ -1,4 +1,4 @@
-name: "Hello world workflow"
+name: "Hello world sample workflow"
 
 # Controls when the action will run. Triggers the workflow on push some to main or production branch
 on:
@@ -12,4 +12,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
          - name: "Print hello world"
-           run: echo "Hello world"
+           run: echo "Hello world this is very good"
