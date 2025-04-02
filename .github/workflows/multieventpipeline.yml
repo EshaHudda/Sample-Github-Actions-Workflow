@@ -1,15 +1,21 @@
 name: "Multi event pipleline / workflow" # This is the name of the pipeline
 
 on:
-    push: # Event: Whenever a push is made to the repository on the main branch
+    push: # Event: Whenever a push is made to the repository on the main/test branch
         branches:
             -main
             -test
-
+    pull_request: # Event: Whenever a pull request is made to the repository
 
 jobs:
     on-push: # This is job name
         runs-on: ubuntu-latest
         steps: # Steps to be executed in job
-            - name: "Running on main push" # Step 1 
-              run: echo "Running on main push"
+            - name: "Running on main/test push" # Step 1 
+              run: echo "Running on main/test push"
+
+    on-pull-request: # Job Name
+        runs-on: ubuntu-latest
+        steps: # Steps to be executed in the job
+            - name: "Running on pull request" # Step 1
+              run: echo "Running on pull request"
