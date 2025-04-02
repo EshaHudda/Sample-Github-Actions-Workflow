@@ -6,10 +6,13 @@ on:
             -main
 
 
+
 jobs:
     on-push: # This is job name
         runs-on: ubuntu-latest
         steps: # Steps to be executed in job
             - name: "Running on main push" # Step 1 
+
               run: echo "Running on main push"
-            
+           
+             run: echo "Running on main push"
